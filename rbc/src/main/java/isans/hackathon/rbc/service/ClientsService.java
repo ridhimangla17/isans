@@ -16,7 +16,12 @@ public class ClientsService {
 
     public String saveClient(clients client) throws ExecutionException, InterruptedException {
         Firestore dbFirestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionApiFuture = dbFirestore.collection(COLLECTION_NAME).document(client.getFirst_name()).set(client);
-        return collectionApiFuture.get().getUpdateTime().toString();
+        ApiFuture<WriteResult> collectionApiFuture = dbFirestore.collection(COLLECTION_NAME).document(client.getClient_id()).set(client);
+        return "Client with ID: " + client.getClient_id() + " deleted added.";
+    }
+    public String deleteClient(String clientId) throws ExecutionException, InterruptedException {
+        Firestore dbFirestore = FirestoreClient.getFirestore();
+        ApiFuture<WriteResult> writeResult = dbFirestore.collection(COLLECTION_NAME).document(clientId).delete();
+        return "Client with ID: " + clientId + " deleted successfully.";
     }
 }

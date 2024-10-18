@@ -16,6 +16,15 @@ public class clients {
     private String majors;
     private String marital_status;
     private String nationality;
+    private String client_id;
+
+    public String getClient_id() {
+        return client_id;
+    }
+
+    public void setClient_id(String client_id) {
+        this.client_id = client_id;
+    }
 
     public String getAddress() {
         return address;
