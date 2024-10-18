@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Helvetica', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #008080;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab {
+  margin-right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #FFD700;
+  color: #000;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  font-size: 18px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter-control, .controller {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.filter-dropdown, .sort-dropdown {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.filter-dropdown {
+  background-color: #FFA500;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.sort-dropdown {
+  background-color: #008080;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.sort-btn, .create-btn {
+  background-color: #FFA500;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.create-btn {
+  background-color: #228B22;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #008080;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.sort-btn:hover, .create-btn:hover {
+  opacity: 0.8;
+}
+
+.tab:hover {
+  background-color: #FFD700;
+  color: #000;
+}
+
+button {
+  cursor: pointer;
 }
