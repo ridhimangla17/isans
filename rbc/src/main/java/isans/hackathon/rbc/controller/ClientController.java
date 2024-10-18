@@ -1,5 +1,6 @@
 package isans.hackathon.rbc.controller;
 
+import isans.hackathon.rbc.entity.clientProgram;
 import isans.hackathon.rbc.entity.clients;
 import isans.hackathon.rbc.service.ClientsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,11 @@ public class ClientController {
         return clientsService.saveClient(client);
     }
     @DeleteMapping("/clients/{clientId}")
-    public String deleteClient(@PathVariable String clientId) throws ExecutionException, InterruptedException {
+    public String deleteClient(@PathVariable int clientId) throws ExecutionException, InterruptedException {
         return clientsService.deleteClient(clientId);
+    }
+    @PostMapping("/register")
+    public String registerClientToProgram(@RequestBody clientProgram clientProgram) throws ExecutionException, InterruptedException {
+        return clientsService.registerClientToProgram(clientProgram);
     }
 }
