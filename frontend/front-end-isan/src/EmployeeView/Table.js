@@ -7,6 +7,7 @@ function Table({ applications }) {
             <table>
                 <thead>
                 <tr>
+                    <th>View</th>
                     <th>Sr No.</th>
                     <th>Name</th>
                     <th>Program</th>
@@ -17,6 +18,7 @@ function Table({ applications }) {
                 <tbody>
                 {applications.map((app, index) => (
                     <tr key={index}>
+                        <td><a href="www.google.com">icon</a></td>
                         <td>{index + 1}</td>
                         <td>{app.name}</td>
                         <td>{app.program}</td>
