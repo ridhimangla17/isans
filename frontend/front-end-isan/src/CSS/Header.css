@@ -1,0 +1,173 @@
+/* Top bar */
+.top-bar {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center; /* Center the content */
+    padding: 10px 20px;
+  }
+  
+  .top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Restrict content width */
+    padding-left: 20px; /* Add padding to align with the logo */
+  }
+  
+  .top-links a {
+    margin-right: 10px;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .social-icons a {
+    margin-left: 10px;
+    color: black;
+  }
+  
+  .social-icons i {
+    font-size: 16px;
+  }
+  
+/* Logo and color bar section */
+.logo-colorbar-section {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center; /* Vertically center the logo and color bar */
+    padding: 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .isans-logo {
+    height: 60px; /* Adjust the size of the logo */
+    width: 200px;
+    margin-right: 100px; /* Increase space between the logo and color bar */
+  }
+  
+  .color-bar {
+    height: 40px; /* Adjust the height of the color bar */
+    width: 900px; /* Keep the width proportional */
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    max-width: 1200px; /* Keep the same width as the logo/color section */
+    margin: 0 auto; /* Center the navbar on the page */
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-grow: 1;
+  }
+  
+  .navbar-links a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .explore-programs-button {
+    background-color: #61b848;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .language-select {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-button i {
+    font-size: 16px;
+  }
+  
+  /* Add styles for the login button */
+.login-button {
+    background-color: transparent;
+    color: black;
+    padding: 8px 15px;
+    border: 1px solid #61b848;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #61b848;
+    color: white;
+  }
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  max-width: 90%; /* Makes it responsive */
+  position: relative; /* For positioning the close button */
+}
+
+.modal-option-button {
+  background-color: #61b848;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-option-button:hover {
+  background-color: #4a9038;
+}
+
+.modal-close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+.modal-close-icon:hover {
+  color: #61b848;
+}
