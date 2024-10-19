@@ -3,8 +3,11 @@ import '../App.css';
 import Table from './Table';
 import { dummyData } from './dummyData';
 import RegistrationForm from './registrationform';
+import ViewEditPrograms from './ViewEditPrograms';
+import AdminDashboard from './AdminDashboard';
 
 function PendingRequests() {
+    const [activeTab, setActiveTab] = useState('pending');
     const [applications, setApplications] = useState(dummyData);
     const [filter, setFilter] = useState({ field: 'program', value: '' });
     const [sortBy, setSortBy] = useState('name');
@@ -60,7 +63,7 @@ function PendingRequests() {
         }
     });
 
-    return (
+    const renderPendingRequests = () => (
         <div>
             {!showForm ? (
                 <div>
@@ -89,13 +92,63 @@ function PendingRequests() {
                                 </button>
                             </div>
                         </div>
-                        <button className="create-btn" onClick={() => setShowForm(true)}>Create Application</button>
+                        <button className="create-btn" onClick={() => setShowForm(true)}>
+                            Create Application
+                        </button>
                     </div>
                     <Table applications={sortedFilteredData} />
                 </div>
             ) : (
                 <RegistrationForm />
             )}
+        </div>
+    );
+
+    const renderActiveTab = () => {
+        switch (activeTab) {
+            case 'pending':
+                return renderPendingRequests(); // Render the pending requests content directly
+            case 'viewEdit':
+                return <ViewEditPrograms />;
+            case 'admin':
+                return <AdminDashboard />;
+            default:
+                return renderPendingRequests(); // Default to Pending Requests
+        }
+    };
+
+    return (
+        <div className="app">
+            <header>
+                <div className="nav">
+                    <span className="logo">ISANS</span>
+                    <div className="tabs">
+                        <button
+                            className={`tab ${activeTab === 'pending' ? 'active' : ''}`}
+                            onClick={() => setActiveTab('pending')}
+                        >
+                            Pending Requests
+                        </button>
+                        <button
+                            className={`tab ${activeTab === 'viewEdit' ? 'active' : ''}`}
+                            onClick={() => setActiveTab('viewEdit')}
+                        >
+                            View/Edit Programs
+                        </button>
+                        <button
+                            className={`tab ${activeTab === 'admin' ? 'active' : ''}`}
+                            onClick={() => setActiveTab('admin')}
+                        >
+                            Admin Dashboard
+                        </button>
+                    </div>
+                </div>
+                <div className="header-right">
+                    <span className="user">B. Ghevariya</span>
+                </div>
+            </header>
+
+            <div className="content">{renderActiveTab()}</div>
         </div>
     );
 }

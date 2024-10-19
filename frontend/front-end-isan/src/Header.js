@@ -243,12 +243,17 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom'; // Import useLocation and useNavigate
 import './CSS/Header.css';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
+
   const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
   const navigate = useNavigate();  // Use useNavigate hook
   const location = useLocation();  // Use useLocation to check the current path
+
+  const navigate = useNavigate();
+
 
   const openModal = () => {
     setShowModal(true);
@@ -257,6 +262,10 @@ const Header = () => {
   const closeModal = () => {
     setShowModal(false);
   };
+  const handleEmployeeClick = () => {
+      closeModal();
+      navigate('/pending-requests');
+    };
 
   const handleClientLogin = () => {
     setIsLoggedIn(true); // Set the login status to true when client logs in
