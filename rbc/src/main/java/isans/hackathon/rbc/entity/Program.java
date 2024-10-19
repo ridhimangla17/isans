@@ -5,6 +5,16 @@ public class Program {
     private String delivery;
     private String Status;
     private String min_literacy;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    private String description;
     private int min_age;
 
     public int getProgram_id() {
