@@ -1,0 +1,94 @@
+/* Main Footer Styling */
+footer {
+    background-color: #17615b;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+  }
+  
+  .footer-left {
+    width: 30%;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .footer-social i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+  
+  .footer-column {
+    width: 22%;
+  }
+  
+  .footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
+  
+  .signup-button {
+    background-color: #61b848;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .signup-button:hover {
+    background-color: #4a9441;
+  }
+  
+  .footer-bottom {
+    background-color: #90b848;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    margin: 10px 0;
+  }
+  
+  .footer-bottom a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: none;
+  }
+  
