@@ -3,6 +3,7 @@ import './App.css';
 import PendingRequests from './EmployeeView/PendingRequests';
 import ViewEditPrograms from './EmployeeView/ViewEditPrograms';
 import AdminDashboard from './EmployeeView/AdminDashboard';
+import RegistrationForm from './EmployeeView/registrationform';
 
 function App() {
   const [activeTab, setActiveTab] = useState('pending');

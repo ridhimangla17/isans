@@ -58,6 +58,7 @@ function PendingRequests() {
         }
     });
 
+
     return (
         <div>
             <div className="controls">
@@ -85,7 +86,7 @@ function PendingRequests() {
                         </button>
                     </div>
                 </div>
-                <button className="create-btn">Create Application</button>
+                <button className="create-btn" >Create Application</button>
             </div>
             <Table applications={sortedFilteredData} />
         </div>
