@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import '../App.css';
 import Table from './Table';
 import { dummyData } from './dummyData';
+import RegistrationForm from './registrationform';
 
 function PendingRequests() {
     const [applications, setApplications] = useState(dummyData);
     const [filter, setFilter] = useState({ field: 'program', value: '' });
     const [sortBy, setSortBy] = useState('name');
     const [sortOrder, setSortOrder] = useState('asc');
+    const [showForm, setShowForm] = useState(false); // State to show/hide the form
 
     const handleFilterChange = (e) => {
         setFilter({ ...filter, value: e.target.value });
@@ -33,7 +35,7 @@ function PendingRequests() {
                     : b[sortBy].localeCompare(a[sortBy]);
             }
         });
-        setApplications(sortedData); // Ensure the sorted array is passed to the state
+        setApplications(sortedData);
         setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
     };
 
@@ -60,34 +62,40 @@ function PendingRequests() {
 
     return (
         <div>
-            <div className="controls">
-                <div className="controller">
-                    <div className="filter-control">
-                        <select className="filter-dropdown" onChange={handleFieldChange}>
-                            <option value="program">Filter by Program</option>
-                            <option value="status">Filter by Status</option>
-                        </select>
-                        <input
-                            type="text"
-                            value={filter.value}
-                            onChange={handleFilterChange}
-                            placeholder={`Filter by ${filter.field}`}
-                        />
+            {!showForm ? (
+                <div>
+                    <div className="controls">
+                        <div className="controller">
+                            <div className="filter-control">
+                                <select className="filter-dropdown" onChange={handleFieldChange}>
+                                    <option value="program">Filter by Program</option>
+                                    <option value="status">Filter by Status</option>
+                                </select>
+                                <input
+                                    type="text"
+                                    value={filter.value}
+                                    onChange={handleFilterChange}
+                                    placeholder={`Filter by ${filter.field}`}
+                                />
+                            </div>
+                            <div className="filter-control">
+                                <select className="sort-dropdown" onChange={handleSortByChange}>
+                                    <option value="name">Sort by Name</option>
+                                    <option value="date">Sort by Date Submitted</option>
+                                    <option value="program">Sort by Program</option>
+                                </select>
+                                <button className="sort-btn" onClick={handleSort}>
+                                    Sort
+                                </button>
+                            </div>
+                        </div>
+                        <button className="create-btn" onClick={() => setShowForm(true)}>Create Application</button>
                     </div>
-                    <div className="filter-control">
-                        <select className="sort-dropdown" onChange={handleSortByChange}>
-                            <option value="name">Sort by Name</option>
-                            <option value="date">Sort by Date Submitted</option>
-                            <option value="program">Sort by Program</option>
-                        </select>
-                        <button className="sort-btn" onClick={handleSort}>
-                            Sort
-                        </button>
-                    </div>
+                    <Table applications={sortedFilteredData} />
                 </div>
-                <button className="create-btn">Create Application</button>
-            </div>
-            <Table applications={sortedFilteredData} />
+            ) : (
+                <RegistrationForm />
+            )}
         </div>
     );
 }

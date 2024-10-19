@@ -1,0 +1,139 @@
+/* Form container */
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1; /* Ensures the form is above the progress bar lines */
+}
+
+/* Progress Bar */
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-grow: 1; /* This ensures the steps grow to fill the available space */
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  z-index: 2;
+}
+
+.step.active .circle {
+  background-color: #28a745;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Labels */
+label {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Paragraph text */
+p {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Buttons */
+button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+/* Spacing between buttons */
+button + button {
+  margin-left: 10px; /* Adds space between buttons */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  select {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
