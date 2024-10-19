@@ -25,12 +25,12 @@ footer {
     font-size: 16px;
     line-height: 1.6;
   }
-  
+/*   
   .footer-social i {
     font-size: 24px;
     margin-right: 10px;
     cursor: pointer;
-  }
+  } */
   
   .footer-links {
     display: flex;
@@ -91,4 +91,11 @@ footer {
   .footer-bottom a:hover {
     text-decoration: none;
   }
-  
+
+    
+  .social-icons-2 a {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: white;
+  }

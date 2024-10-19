@@ -15,11 +15,17 @@ const Footer = () => {
             ISANS helps immigrants build a future in Nova Scotia. Our vision is
             to build a community where all can belong and grow.
           </p>
-          <div className="footer-social">
+          {/* <div className="footer-social">
             <i className="fa fa-accessible-icon" aria-hidden="true"></i>
             <i className="fa fa-twitter" aria-hidden="true"></i>
             <i className="fa fa-linkedin" aria-hidden="true"></i>
             <i className="fa fa-instagram" aria-hidden="true"></i>
+          </div> */}
+          <div className="social-icons-2">
+            <a href="#"><i className="fab fa-facebook"></i></a>
+            <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="#"><i className="fab fa-linkedin"></i></a>
+            <a href="#"><i className="fab fa-instagram"></i></a>
           </div>
         </div>
         <div className="footer-links">
