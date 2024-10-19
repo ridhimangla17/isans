@@ -241,7 +241,7 @@
 
 
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom'; // Import useLocation and useNavigate
+import { useLocation } from 'react-router-dom'; // Import useLocation and useNavigate
 import './CSS/Header.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -251,8 +251,6 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
   const navigate = useNavigate();  // Use useNavigate hook
   const location = useLocation();  // Use useLocation to check the current path
-
-  const navigate = useNavigate();
 
 
   const openModal = () => {
@@ -276,7 +274,7 @@ const Header = () => {
   const handleEmployeeLogin = () => {
     setIsLoggedIn(true); // Set the login status to true when employee logs in
     closeModal();
-    navigate('/employee-dashboard');  // Redirect to Employee Dashboard page (create the route as needed)
+    navigate('/pending-requests');  // Redirect to Employee Dashboard page (create the route as needed)
   };
 
   const handleLogout = () => {
