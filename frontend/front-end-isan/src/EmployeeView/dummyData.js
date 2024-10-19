@@ -9,7 +9,7 @@ export const dummyData = [
         name: "Bob Johnson",
         program: "Market-Ready Project",
         date: "2024-10-14",
-        status: "Approved",
+        status: "Queued",
     },
     {
         name: "Carol White",
@@ -21,12 +21,12 @@ export const dummyData = [
         name: "David Green",
         program: "Welcome Ambassador Program",
         date: "2024-10-13",
-        status: "Rejected",
+        status: "Pending",
     },
     {
         name: "Eva Brown",
         program: "Onboarding Employer Engagement",
         date: "2024-10-10",
-        status: "Approved",
+        status: "Queued",
     }
 ];
