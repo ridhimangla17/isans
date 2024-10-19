@@ -153,9 +153,11 @@
 
 import React, { useState } from 'react';
 import './CSS/Header.css';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   const openModal = () => {
     setShowModal(true);
@@ -164,6 +166,10 @@ const Header = () => {
   const closeModal = () => {
     setShowModal(false);
   };
+  const handleEmployeeClick = () => {
+      closeModal();
+      navigate('/pending-requests');
+    };
 
   return (
     <header>
@@ -229,7 +235,7 @@ const Header = () => {
             <h3>Login as:</h3>
             <div>
               <button className="modal-option-button">Client</button>
-              <button className="modal-option-button">Employee</button>
+              <button className="modal-option-button" onClick={handleEmployeeClick}>Employee</button> {}
             </div>
           </div>
         </div>
