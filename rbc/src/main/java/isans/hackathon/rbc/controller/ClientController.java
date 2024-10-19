@@ -5,7 +5,6 @@ import isans.hackathon.rbc.entity.clients;
 import isans.hackathon.rbc.service.ClientsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import shaded_package.io.swagger.annotations.Authorization;
 
 import java.util.concurrent.ExecutionException;
 
