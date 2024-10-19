@@ -1,76 +1,185 @@
 /* Main section styling */
 .info-section {
-    display: flex;
-    padding: 20px;
-  }
-  
-  /* Left filter section */
-  .info-left {
-    width: 25%;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-right: 1px solid #ddd;
-  }
-  
-  .info-left h3 {
-    color: #e63946;
-    margin-bottom: 10px;
-  }
-  
-  .info-left p {
-    margin-bottom: 20px;
-  }
-  
-  .info-left form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .info-left input,
-  .info-left select,
-  .info-left button {
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-  
-  .info-left button {
-    background-color: #61b848;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Right program display section */
+  display: flex;
+  padding: 20px;
+}
+
+/* Left filter section */
+.info-left {
+  width: 25%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+}
+
+.info-left h3 {
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.info-left p {
+  margin-bottom: 20px;
+}
+
+.info-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-left input,
+.info-left select,
+.info-left button {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.info-left button {
+  background-color: #61b848;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Right program display section */
+.info-right {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display 3 cards per row */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Program card with duller solid colors for each of the 9 cards */
+.program-card {
+  color: #333; /* Darker text color for better readability */
+  border: none;
+  padding: 20px;
+  border-radius: 12px; /* Rounded corners */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.program-card:nth-child(1) {
+  background-color: #e57373; /* Duller Red */
+}
+
+.program-card:nth-child(2) {
+  background-color: #ffb74d; /* Duller Orange */
+}
+
+.program-card:nth-child(3) {
+  background-color: #fff176; /* Duller Yellow */
+}
+
+.program-card:nth-child(4) {
+  background-color: #aed581; /* Duller Green */
+}
+
+.program-card:nth-child(5) {
+  background-color: #64b5f6; /* Duller Blue */
+}
+
+.program-card:nth-child(6) {
+  background-color: #ba68c8; /* Duller Purple */
+}
+
+.program-card:nth-child(7) {
+  background-color: #f48fb1; /* Duller Pink */
+}
+
+.program-card:nth-child(8) {
+  background-color: #80cbc4; /* Duller Teal */
+}
+
+.program-card:nth-child(9) {
+  background-color: #a1887f; /* Duller Brown */
+}
+
+/* Hover effects */
+.program-card:hover {
+  transform: translateY(-10px); /* Lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.program-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  color: #222; /* Darker color for better contrast */
+}
+
+.program-card p {
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  color: #444; /* Slightly lighter dark for descriptions */
+}
+
+/* Responsive design: adjust grid for smaller screens */
+@media (max-width: 768px) {
   .info-right {
-    width: 75%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+      grid-template-columns: 1fr; /* Single column on smaller screens */
   }
-  
-  .program-card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    background-color: white;
-    text-align: center;
-  }
-  
-  .program-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  
-  .program-card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .program-card p {
-    font-size: 14px;
-  }
-  
+}
+
+/* Main section styling */
+.info-section {
+  display: flex;
+  padding: 20px;
+}
+
+/* Left filter section */
+.info-left {
+  width: 25%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+}
+
+.info-left h3 {
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.info-left p {
+  margin-bottom: 20px;
+}
+
+.info-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%; /* Ensure form takes full width */
+}
+
+.info-left input,
+.info-left select,
+.info-left button {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  width: 100%; /* Make sure all inputs, selects, and buttons are 100% width */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.info-left button {
+  background-color: #007bff; /* Adjust color if needed */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Right program display section */
+.info-right {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display 3 cards per row */
+  gap: 20px;
+  padding: 20px;
+}

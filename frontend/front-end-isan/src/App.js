@@ -10,6 +10,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import PendingRequests from './EmployeeView/PendingRequests';
 import RegistrationForm from './EmployeeView/registrationform';
 
+
 function App() {
   return (
     <Router>
