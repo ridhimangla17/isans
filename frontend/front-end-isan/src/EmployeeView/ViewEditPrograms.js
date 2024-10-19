@@ -10,6 +10,10 @@ function ViewEditPrograms() {
         setSearchTerm(e.target.value);
     };
 
+    const handleEdit = (program) => {
+        alert(`Edit clicked for ${program.name}`); // Replace with actual edit functionality
+    };
+
     const filteredPrograms = programs.filter((program) =>
         program.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -41,7 +45,15 @@ function ViewEditPrograms() {
                             <tr key={index}>
                                 <td>{program.name}</td>
                                 <td>{program.created}</td>
-                                <td>{program.updated}</td>
+                                <td>
+                                    {program.updated}
+                                    <button
+                                        className="edit-btn"
+                                        onClick={() => handleEdit(program)}
+                                    >
+                                        Edit
+                                    </button>
+                                </td>
                             </tr>
                         ))
                     ) : (
