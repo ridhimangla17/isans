@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/isans.iml" filepath="$PROJECT_DIR$/.idea/isans.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rbc/rbc.iml" filepath="$PROJECT_DIR$/rbc/rbc.iml" />
     </modules>
   </component>
 </project>
