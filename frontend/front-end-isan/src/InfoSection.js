@@ -31,7 +31,7 @@ const InfoSection = () => {
 
   const programs = [
     {
-      name: "Youth Life Skills",
+      name: "Volnteeer at ISANS",
       delivery: "In-Person",
       gender: "All",
       min_age: 15,
@@ -47,7 +47,7 @@ const InfoSection = () => {
       visa: ["Student", "Work Permit"],
     },
     {
-      name: "Workplace Writing Skills",
+      name: "Practice Interview Program",
       delivery: "Blended",
       gender: "Women",
       min_age: 19,
@@ -55,7 +55,7 @@ const InfoSection = () => {
       visa: ["Permanent Resident", "Citizen"],
     },
     {
-      name: "Advanced English Skills",
+      name: "Market-Ready Project",
       delivery: "Online",
       gender: "All",
       min_age: 18,
@@ -63,7 +63,7 @@ const InfoSection = () => {
       visa: ["Student", "Anyone"],
     },
     {
-      name: "Business Networking Skills",
+      name: "Business Training",
       delivery: "In-Person",
       gender: "All",
       min_age: 20,
@@ -71,7 +71,7 @@ const InfoSection = () => {
       visa: ["Work Permit", "Citizen"],
     },
     {
-      name: "Healthcare Training Program",
+      name: "Welcome Ambassador Program",
       delivery: "Blended",
       gender: "All",
       min_age: 18,
@@ -79,7 +79,7 @@ const InfoSection = () => {
       visa: ["Permanent Resident", "Work Permit", "Citizen"],
     },
     {
-      name: "Technology Bootcamp",
+      name: "AIP Employers",
       delivery: "Online",
       gender: "All",
       min_age: 21,
@@ -87,7 +87,7 @@ const InfoSection = () => {
       visa: ["Work Permit", "Student"],
     },
     {
-      name: "Community Engagement Workshop",
+      name: "Strategies for IELTS",
       delivery: "In-Person",
       gender: "All",
       min_age: 16,
@@ -95,7 +95,7 @@ const InfoSection = () => {
       visa: ["Anyone", "Permanent Resident"],
     },
     {
-      name: "Leadership and Management Skills",
+      name: "Mom and Baby Class",
       delivery: "Online",
       gender: "All",
       min_age: 25,

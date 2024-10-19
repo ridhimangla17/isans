@@ -10,6 +10,7 @@ const Header = () => {
   const navigate = useNavigate();  // Use useNavigate hook
   const location = useLocation();  // Use useLocation to check the current path
 
+
   const openModal = () => {
     setShowModal(true);
   };
@@ -31,7 +32,7 @@ const Header = () => {
   const handleEmployeeLogin = () => {
     setIsLoggedIn(true); // Set the login status to true when employee logs in
     closeModal();
-    navigate('/employee-dashboard');  // Redirect to Employee Dashboard page (create the route as needed)
+    navigate('/pending-requests');  // Redirect to Employee Dashboard page (create the route as needed)
   };
 
   const handleLogout = () => {

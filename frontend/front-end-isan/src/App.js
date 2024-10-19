@@ -8,6 +8,8 @@ import Dashboard from './ClientDashboard'; // Import the ClientDashboard compone
 import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import PendingRequests from './EmployeeView/PendingRequests';
+import RegistrationForm from './EmployeeView/registrationform';
+
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/client-dashboard" element={<Dashboard />} />
-          {/* You can add more routes for different pages */}
+          <Route path="/register" element={<RegistrationForm />} />
           <Route path="/pending-requests" element={<PendingRequests />} />
         </Routes>
         <HeroSection />
