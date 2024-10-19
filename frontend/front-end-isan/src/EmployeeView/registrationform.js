@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import '../App.css';
+import '../rf.css';
 
 function RegistrationForm() {
   const [step, setStep] = useState(1); // To keep track of the current step
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -41,6 +42,29 @@ function RegistrationForm() {
 
   const prevStep = () => {
     setStep(step - 1);
+  };
+
+  // Progress bar
+  const ProgressBar = () => {
+    return (
+      <div className="progress-bar">
+        <div className={step >= 1 ? 'step active' : 'step'}>
+          <div className="circle">1</div>
+        </div>
+        <div className={step >= 2 ? 'step active' : 'step'}>
+          <div className="line"></div>
+          <div className="circle">2</div>
+        </div>
+        <div className={step >= 3 ? 'step active' : 'step'}>
+          <div className="line"></div>
+          <div className="circle">3</div>
+        </div>
+        <div className={step >= 4 ? 'step active' : 'step'}>
+          <div className="line"></div>
+          <div className="circle">4</div>
+        </div>
+      </div>
+    );
   };
 
   // Step 1: Personal Info
@@ -84,13 +108,13 @@ function RegistrationForm() {
       <input type="text" name="primaryLanguage" placeholder="Primary Language" value={formData.primaryLanguage} onChange={handleChange} />
       <input type="text" name="preferredOfficialLanguage" placeholder="Preferred Official Language" value={formData.preferredOfficialLanguage} onChange={handleChange} />
       <select name="highestEducation" value={formData.highestEducation} onChange={handleChange}>
-        <option value="">Select Highest Education Level</option>
+        <option value="">Select Highest Level of Education</option>
         <option value="highSchool">High School</option>
         <option value="bachelor">Bachelor's Degree</option>
         <option value="master">Master's Degree</option>
         <option value="phd">PhD</option>
       </select>
-      <input type="text" name="fieldOfEducation" placeholder="Field of Education" value={formData.fieldOfEducation} onChange={handleChange} />
+      <input type="text" name="fieldOfEducation" placeholder="Field of Education (Majors)" value={formData.fieldOfEducation} onChange={handleChange} />
       <button onClick={prevStep}>Back</button>
       <button onClick={nextStep}>Next</button>
     </div>
@@ -102,16 +126,16 @@ function RegistrationForm() {
       <h2>Consent</h2>
       <p>If you would like to change your consent, please email intake@isans.ca</p>
       <input type="checkbox" name="consent" checked={formData.consent} onChange={() => setFormData({ ...formData, consent: !formData.consent })} />
-      <label>I hereby confirm that the information provided by me is current and accurate.</label>
-      <input type="date" name="date" placeholder="Today's Date" value={formData.date} onChange={handleChange} />
+      <label>I hereby confirm that the information provided by me on this registration form is current and accurate.</label>
+      <input type="date" name="date" placeholder="Today's Date (mm/dd/yyyy)" value={formData.date} onChange={handleChange} />
       <button onClick={prevStep}>Back</button>
       <button type="submit">Submit</button>
     </div>
   );
 
-  // Render the current step based on the 'step' state
   return (
     <div className="form-container">
+      <ProgressBar />
       {step === 1 && personalInfo}
       {step === 2 && familyInfo}
       {step === 3 && education}
