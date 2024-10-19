@@ -1,9 +1,11 @@
 package isans.hackathon.rbc.entity;
 
+import java.util.ArrayList;
+
 public class Program {
     private String name;
     private String delivery;
-    private String Status;
+    private ArrayList<String> Status;
     private String min_literacy;
 
     public String getDescription() {
@@ -45,11 +47,11 @@ public class Program {
         this.delivery = delivery;
     }
 
-    public String getStatus() {
+    public ArrayList<String> getStatus() {
         return Status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(ArrayList<String> status) {
         Status = status;
     }
 
